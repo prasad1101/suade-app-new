@@ -21,3 +21,15 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
+
+.outstanding{
+background-color: aqua;
+}
+
+.accured{
+background-color: blue;
+}
+
+.less{
+background-color: brown;
+}

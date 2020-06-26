@@ -21,32 +21,15 @@
         <div class="row">
             <ul>
                 <li>
-                    <input type="checkbox">Link 1
+                    <input type="checkbox" [(ngModel)]="outstandingAmt"> Outstanding amount
                 </li>
                 <li>
-                    <input type="checkbox">Link 2
+                    <input type="checkbox" [(ngModel)]="accuredIntrest"> Accured intrest receivable
                 </li>
                 <li>
-                    <input type="checkbox">Link 3
+                    <input type="checkbox" [(ngModel)]="stageLoss"> Stage loss 1 allowance
                 </li>
-                <li>
-                    <input type="checkbox">Link 1
-                </li>
-                <li>
-                    <input type="checkbox">Link 2
-                </li>
-                <li>
-                    <input type="checkbox">Link 3
-                </li>
-                <li>
-                    <input type="checkbox">Link 1
-                </li>
-                <li>
-                    <input type="checkbox">Link 2
-                </li>
-                <li>
-                    <input type="checkbox">Link 3
-                </li>
+                
             </ul>
 
         </div>
@@ -78,8 +61,8 @@
                         </td>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody id="table">
+                    <tr [ngClass]="{'outstanding':outstandingAmt == true}">
                         <td>
                             1
                         </td>
@@ -90,19 +73,21 @@
 
                         </td>
                         <td>
-                            Raw_1.Col2
+                           <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
                         </td>
                         <td>
-                            Raw_1.Col2
+                        <a href="#table">Accounts</a><br>
                         </td>
                         <td>
-                            Raw_1.Col2
+                            <a href="#table">Accounts</a><br>
                         </td>
                         <td>
-                            Raw_1.Col2
+                            <a href="#table">Accounts</a><br>
                         </td>
                     </tr>
-                    <tr>
+                    <tr [ngClass]="{'accured':accuredIntrest == true}">
                         <td>
                             2
                         </td>
@@ -113,10 +98,10 @@
 
                         </td>
                         <td>
-                            Raw_1.Col2
+                            <a href="#table">Accounts</a><br>
                         </td>
                         <td>
-                            Raw_1.Col2
+                            <a href="#table">Accounts</a><br>
                         </td>
                         <td>
                             Raw_1.Col2
@@ -125,7 +110,7 @@
                             Raw_1.Col2
                         </td>
                     </tr>
-                    <tr>
+                    <tr [ngClass]="{'less':stageLoss == true}">
                         <td>
                             3
                         </td>

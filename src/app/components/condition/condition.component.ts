@@ -9,6 +9,10 @@ export class ConditionComponent implements OnInit {
 
   constructor() { }
 
+  outstandingAmt : boolean = false;
+  accuredIntrest : boolean = false;
+  stageLoss : boolean = false;
+
   ngOnInit() {
   }
 
