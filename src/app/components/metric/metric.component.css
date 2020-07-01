@@ -13,3 +13,19 @@ li {
     float: left;
     padding: 10px;
 }
+
+.dropdown .dropdown-menu {
+	 transition: all 0.5s;
+	 overflow: hidden;
+	 transform-origin: top center;
+	 transform: scale(1, 0);
+	 display: block;
+}
+ .dropdown:hover .dropdown-menu {
+	 transform: scale(1);
+}
+ 
+a{
+    color: blue;
+    cursor: pointer;
+}

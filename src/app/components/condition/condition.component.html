@@ -15,18 +15,18 @@
         <a class="nav-link " [routerLink]="['/source']">Source</a>
     </li>
 </ul>
-<div class="container">
+<div class="container-fluid">
     <div class="jumbotron">
         <h2>Condition</h2>
         <div class="row">
             <ul>
-                <li>
+                <li [ngClass]="{'outstanding':outstandingAmt == true}">
                     <input type="checkbox" [(ngModel)]="outstandingAmt"> Outstanding amount
                 </li>
-                <li>
+                <li [ngClass]="{'accured':accuredIntrest == true}">
                     <input type="checkbox" [(ngModel)]="accuredIntrest"> Accured intrest receivable
                 </li>
-                <li>
+                <li [ngClass]="{'less':stageLoss == true}">
                     <input type="checkbox" [(ngModel)]="stageLoss"> Stage loss 1 allowance
                 </li>
                 
@@ -67,7 +67,7 @@
                             1
                         </td>
                         <td>
-                            Outstanding amount
+                            <b>Outstanding amount</b>
                         </td>
                         <td>
 
@@ -92,7 +92,7 @@
                             2
                         </td>
                         <td>
-                            Add: Accrued intrest receivable
+                            <b>Add: Accrued intrest receivable</b>
                         </td>
                         <td>
 
@@ -115,7 +115,7 @@
                             3
                         </td>
                         <td>
-                            Less: stage loss 1 allowance
+                            <b>Less: stage loss 1 allowance</b>
                         </td>
                         <td>
 
